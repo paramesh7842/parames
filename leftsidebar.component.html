@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-2 sidenavbar">
+        <div><button class="btn btn-secondary Vanilla">Vanilla</button></div>
+        <div><button class="btn btn-secondary ButterScotch">ButterScotch</button></div>
+        <div><button class="btn btn-secondary StrawBerry">StrawBerry</button></div>
+        <div><button class="btn btn-secondary Pineapple">Pineapple</button></div>
+        <div><button class="btn btn-secondary Cofee">Coffee</button></div>
+        <div><button class="btn btn-secondary Banana">Banana</button></div>
+        <div><button class="btn btn-secondary BalckBerry">BalckBerry</button></div>
+        <div><button class="btn btn-secondary Pista">Pista</button></div>
+        <div><button class="btn btn-secondary BlueBerry">BlueBerry</button></div>
+        <div><button class="btn btn-secondary Chocolate">Chocolate</button></div>
+    </div>
+    <div class="col-8 colum8">
+        <div class="row firstFiled">      
+            <div class="col-3"><label for="name">Enetr Customer Name</label></div>
+            <div class="col-3"><input type="text" id="name" [(ngModel)]="customerName"></div>
+            <div class="col-2"><button class="btn btn-success" (click)="UserName($event)">Submit</button></div>
+            <div class="col-3"><p><u>{{x}}</u></p></div>
+          </div>
+        <div class="row scondField">
+            <div class="col-4"><input type="text" placeholder="Add Menu Here" [(ngModel)]="addMenu"></div>
+            <div class="col-3"><button class="btn btn-success addMenuButton" (click)="menuitemsadding($event)">Add Menu</button></div>
+        </div>
+    </div>
+    <div class="col-2 colum2">
+        <div  *ngFor="let item of storeitems;let i = index">
+            <p>{{i+1}}&nbsp;&nbsp;{{item}}</p>
+        </div>
+    </div>
+</div> 
